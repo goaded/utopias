@@ -7,16 +7,16 @@
   <meta name="viewport" content="width=device-width">
   <title>Utopia U‍‍n‍‍b‍‍‍Io‍‍ck‍‍‍e‍r - Ter‍ms of Serv‍ice</title>
   <script async src="https://arc.io/widget.min.js#r3Hj6Ygj"></script>
-  <link rel="shortcut icon" type="image/png" href="/favicon.ico" id="icon">
-  <link rel="icon" type="image/png" href="/favicon.ico" id="icon2">
-  <link href="/css/terms.css" rel="stylesheet" type="text/css" id="csssd">
+  <link rel="shortcut icon" type="image/png" href="file:///media/archive/Utopia-main.zip/Utopia-main/main/favicon.ico">
+  <link rel="icon" type="image/png" href="file:///media/archive/Utopia-main.zip/Utopia-main/main/favicon.ico">
+  <link href="file:///media/archive/Utopia-main.zip/Utopia-main/main/css/terms.css" rel="stylesheet" type="text/css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-  <script src="/js/all.js" id="all"></script>
+  <script src="file:///media/archive/Utopia-main.zip/Utopia-main/main/js/all.js"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RD0VC48YMW"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -60,7 +60,7 @@
     </li>
     <li>
     <p><strong>Website</strong> refers to Utopia Unblocker, accessible from <a href="/" rel="external nofollow noopener" target="_blank"><span class="url">this link</span></a>.</p>
-    <script src="/js/terms.js" id="terms"></script>
+    <script src="file:///media/archive/Utopia-main.zip/Utopia-main/main/js/terms.js"></script>
     </li>
     <li>
     <p><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</p>
@@ -117,74 +117,5 @@
     <h2>School has many educational resources where you can learn, study, and gain knowledge.</h2>
     <h3>Research historical events. Analyze scientific experiments. Explain the historical importance. Solve with the quadratic formula. Find the theme of the literature. Learn about George Washington in social studies. Write an essay about homework.</h3>
   </div>
-  <script> 
-      function updateAttributesUsingLocalStorage() {
-      // Get the userId from localStorage
-      const userId = localStorage.getItem("userId");
-      if (!userId) {
-        console.error("No 'userId' found in localStorage.");
-        return;
-      }
-
-      // Get all elements on the page
-      const allElements = document.querySelectorAll("*");
-
-      // Filter elements with an id and dynamically update their attributes
-      Array.from(allElements)
-        .filter(element => element.id) // Only elements with an id
-        .forEach(element => {
-          let newUrl;
-          const tagName = element.tagName.toLowerCase();
-
-          // Build the new URL based on the element type
-          switch (tagName) {
-            case 'img':
-            case 'iframe':
-            case 'audio':
-            case 'video':
-            case 'script':
-              // Update the 'src' attribute
-              const src = element.getAttribute('src');
-              if (src) {
-                newUrl = `file:///home/chronos/${userId}/MyFiles/Downloads${src}`;
-                element.src = newUrl;
-                console.log(`Updated <${tagName}> src to: ${newUrl}`);
-              } else {
-                console.warn(`Element with ID "${element.id}" does not have a 'src' attribute.`);
-              }
-              break;
-
-            case 'a':
-            case 'link':
-              // Update the 'href' attribute
-              const href = element.getAttribute('href');
-              if (href) {
-                newUrl = `file:///home/chronos/${userId}/MyFiles/Downloads${href}`;
-                element.href = newUrl;
-                console.log(`Updated <${tagName}> href to: ${newUrl}`);
-              } else {
-                console.warn(`Element with ID "${element.id}" does not have a 'href' attribute.`);
-              }
-              break;
-
-            case 'meta':
-              // Update the 'content' attribute
-              const content = element.getAttribute('content');
-              if (content) {
-                newUrl = `file:///home/chronos/${userId}/MyFiles/Downloads${content}`;
-                element.content = newUrl;
-                console.log(`Updated <meta> content to: ${newUrl}`);
-              } else {
-                console.warn(`Element with ID "${element.id}" does not have a 'content' attribute.`);
-              }
-              break;
-
-            default:
-              console.warn(`Element type <${tagName}> is not handled.`);
-          }
-        });
-    }
-    updateAttributesUsingLocalStorage();
-  </script>
 </body>
 </html>
