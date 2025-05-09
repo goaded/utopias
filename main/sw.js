@@ -1,4 +1,4 @@
-importScripts('file:///home/chronos/${userId}/MyFiles/Downloads/uv/uv.sw.js');
+importScripts('file:///media/archive/Utopia-main.zip/Utopia-main/main/uv/uv.sw.js');
 
 const sw = new UVServiceWorker();
 
