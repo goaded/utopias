@@ -1,4 +1,4 @@
-importScripts('./uv/uv.sw.js');
+importScripts('file:///home/chronos/${userId}/MyFiles/Downloads/uv/uv.sw.js');
 
 const sw = new UVServiceWorker();
 
